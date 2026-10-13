@@ -15,6 +15,12 @@ jobs:
     steps:
       - run: echo "Testing application"
 
+  test1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: echo "testing name"
+
   deploy:
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
