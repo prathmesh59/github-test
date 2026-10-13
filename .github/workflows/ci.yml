@@ -14,3 +14,10 @@ jobs:
     needs: build
     steps:
       - run: echo "Testing application"
+
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo "Deploying production"
