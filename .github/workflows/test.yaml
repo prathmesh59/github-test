@@ -11,6 +11,12 @@ on:
           - development
           - staging
           - production
+      vault:
+        description: "Enter vault number"
+        required: false
+        type: number
+        default: 10
+
 
 jobs:
   deploy:
@@ -18,3 +24,8 @@ jobs:
     steps:
       - name: Show selected environment
         run: echo "Deploying to ${{ inputs.environment }}"
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display vault number
+        run: echo "Vault number is ${{ inputs.vault }}"
