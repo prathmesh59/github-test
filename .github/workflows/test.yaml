@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show selected environment
-        run: echo "Deploying to ${{ inputs.environment }}"
+        run: echo "Deployingg to ${{ inputs.environment }}"
   example:
     runs-on: ubuntu-latest
     steps:
